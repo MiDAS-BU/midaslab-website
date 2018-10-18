@@ -6,7 +6,7 @@ tidy:
   image: dbogatov/docker-images:tidy-latest
   stage: test
   before_script:
-  - http-server -p 8080 > /dev/null &
+  - http-server ./website -p 8080 > /dev/null &
   - sleep 5
   script:
   - curl -Ls http://localhost:8080/index.html | tidy -e
@@ -17,7 +17,7 @@ blc:
   image: dbogatov/docker-images:blc-latest
   stage: test
   before_script:
-  - http-server -p 8080 > /dev/null &
+  - http-server ./website -p 8080 > /dev/null &
   - sleep 5
   script:
   - blc --filter-level 3 --input http://localhost:8080/index.html -rog --exclude "*linkedin.*" --exclude *facebook.* | tee blc.out
@@ -39,8 +39,7 @@ pages:
   image: dbogatov/docker-images:alpine-extras-latest
   stage: release
   script:
-  - mkdir public/
-  - mv assets/ *.html public/
+  - mv website public
   - echo "Uploading files to pages"
   artifacts:
     expire_in: 30 min
