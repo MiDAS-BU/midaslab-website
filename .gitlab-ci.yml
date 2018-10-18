@@ -1,0 +1,52 @@
+stages:
+- test
+- release
+
+tidy:
+  image: dbogatov/docker-images:tidy-latest
+  stage: test
+  before_script:
+  - http-server -p 8080 > /dev/null &
+  - sleep 5
+  script:
+  - curl -Ls http://localhost:8080/index.html | tidy -e
+  tags:
+  - docker
+  
+blc:
+  image: dbogatov/docker-images:blc-latest
+  stage: test
+  before_script:
+  - http-server -p 8080 > /dev/null &
+  - sleep 5
+  script:
+  - blc --filter-level 3 --input http://localhost:8080/index.html -rog --exclude "*linkedin.*" --exclude *facebook.* | tee blc.out
+  - "cat blc.out | grep '0 broken.'"
+  tags:
+  - docker
+
+# SETUP YOURSELF
+dockerify:
+  stage: release
+  script:
+  - docker build -t registry.dbogatov.org/templates/simple-webpage .
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.dbogatov.org
+  - docker push registry.dbogatov.org/templates/simple-webpage
+  tags:
+  - shell
+
+pages:
+  image: dbogatov/docker-images:alpine-extras-latest
+  stage: release
+  script:
+  - mkdir public/
+  - mv assets/ *.html public/
+  - echo "Uploading files to pages"
+  artifacts:
+    expire_in: 30 min
+    paths:
+    - public
+  tags:
+  - docker
+  only:
+  - master
