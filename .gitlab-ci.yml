@@ -16,9 +16,9 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
 
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/build-review.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/stop-review.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/build-review.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/review.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/stop-review.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
