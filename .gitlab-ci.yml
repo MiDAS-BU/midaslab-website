@@ -14,6 +14,7 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
 
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/code-quality.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/sast.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
@@ -25,18 +26,17 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
-sast:
+dependency-scanning:
   allow_failure: true
   script:
     - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - |
-      docker run \
-        --env SAST_CONFIDENCE_LEVEL="${SAST_CONFIDENCE_LEVEL:-3}" \
-        --volume "$PWD:/code" \
-        --volume /var/run/docker.sock:/var/run/docker.sock \
-        "registry.gitlab.com/gitlab-org/security-products/sast:$SP_VERSION" /app/bin/run /code
+    - docker run
+        --env DEP_SCAN_DISABLE_REMOTE_CHECKS="${DEP_SCAN_DISABLE_REMOTE_CHECKS:-false}"
+        --volume "$PWD:/code"
+        --volume /var/run/docker.sock:/var/run/docker.sock
+        "registry.gitlab.com/gitlab-org/security-products/dependency-scanning:$SP_VERSION" /code
   artifacts:
     reports:
-      sast: gl-sast-report.json
+      dependency_scanning: gl-dependency-scanning-report.json
   tags:
   - shell
