@@ -2,7 +2,7 @@ stages:
 - test
 - build-review
 - review
-- quality-security # TODO
+- quality-security
 - release
 
 variables:
@@ -14,8 +14,8 @@ variables:
 include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
 
-# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
-# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/build-review.yml'
 
@@ -28,27 +28,7 @@ include:
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/container-scan.yml'
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/dast.yml'
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/license-check.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/performance.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
-
-performance:
-  stage: quality-security
-  image: docker:git
-  variables:
-    URL: "https://review:$AUTHPASSWORD@$CI_BUILD_REF_NAME-$CI_PROJECT_NAME.review.dbogatov.org"
-  services:
-    - docker:stable-dind
-  script:
-    - mkdir gitlab-exporter
-    - wget -O ./gitlab-exporter/index.js https://gitlab.com/gitlab-org/gl-performance/raw/master/index.js
-    - mkdir sitespeed-results
-    - docker run --shm-size=1g --rm -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io:6.3.1 --plugins.add ./gitlab-exporter --outputFolder sitespeed-results $URL
-    - mv sitespeed-results/data/performance.json performance.json
-  artifacts:
-    paths:
-      - sitespeed-results/
-    reports:
-      performance: performance.json
-  tags:
-  - docker
