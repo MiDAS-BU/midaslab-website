@@ -2,6 +2,7 @@ stages:
 - test
 - build-review
 - review
+- quality-security
 - release
 
 variables:
@@ -13,30 +14,45 @@ variables:
 include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
 
-# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/code-quality.yml'
-# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/sast.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/build-review.yml'
+
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/review.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/stop-review.yml'
+
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/code-quality.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/sast.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/deps-scan.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
-dependency-scanning:
+container-scan:
+  image: docker:stable
+  variables:
+    DOCKER_DRIVER: overlay2
+    CI_APPLICATION_REPOSITORY: registry.dbogatov.org/$REPOLOWER/review/$CI_COMMIT_REF_NAME
+    CI_APPLICATION_TAG: latest
   allow_failure: true
+  services:
+    - docker:stable-dind
   script:
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run
-        --env DEP_SCAN_DISABLE_REMOTE_CHECKS="${DEP_SCAN_DISABLE_REMOTE_CHECKS:-false}"
-        --volume "$PWD:/code"
-        --volume /var/run/docker.sock:/var/run/docker.sock
-        "registry.gitlab.com/gitlab-org/security-products/dependency-scanning:$SP_VERSION" /code
+    - docker run -d --name db arminc/clair-db:latest
+    - docker run -p 6060:6060 --link db:postgres -d --name clair --restart on-failure arminc/clair-local-scan:v2.0.1
+    - apk add -U wget ca-certificates
+    - docker pull ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
+    - wget https://github.com/arminc/clair-scanner/releases/download/v8/clair-scanner_linux_amd64
+    - mv clair-scanner_linux_amd64 clair-scanner
+    - chmod +x clair-scanner
+    - touch clair-whitelist.yml
+    - while( ! wget -q -O /dev/null http://docker:6060/v1/namespaces ) ; do sleep 1 ; done
+    - retries=0
+    - echo "Waiting for clair daemon to start"
+    - while( ! wget -T 10 -q -O /dev/null http://docker:6060/v1/namespaces ) ; do sleep 1 ; echo -n "." ; if [ $retries -eq 10 ] ; then echo " Timeout, aborting." ; exit 1 ; fi ; retries=$(($retries+1)) ; done
+    - ./clair-scanner -c http://docker:6060 --ip $(hostname -i) -r gl-container-scanning-report.json -l clair.log -w clair-whitelist.yml ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG} || true
   artifacts:
     reports:
-      dependency_scanning: gl-dependency-scanning-report.json
-  tags:
-  - shell
+      container_scanning: gl-container-scanning-report.json
