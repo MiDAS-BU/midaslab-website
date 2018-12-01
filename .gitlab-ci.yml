@@ -1,13 +1,24 @@
 stages:
 - test
+- build-review
+- review
 - release
 
 variables:
   INDEX: "index.html"
   REPO: "templates/simple-webpage"
+  AUTHPASSWORD: "example" # change to "" (empty string) to disable authentication
+  # username is always "review" (without quotes)
 
 include:
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
+
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
+
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/build-review.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/stop-review.yml'
+
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
