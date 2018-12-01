@@ -23,24 +23,24 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
-code_quality:
+code-quality:
   stage: test
-  image: docker:stable
-  variables:
-    DOCKER_DRIVER: overlay2
+  # image: docker:stable
+  # variables:
+  #   DOCKER_DRIVER: overlay2
   allow_failure: true
-  services:
-    - docker:stable-dind
+  # services:
+  #   - docker:stable-dind
   script:
     - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
     - |
-      docker run
-        --env SOURCE_CODE="$PWD"
-        --volume "$PWD":/code
-        --volume /var/run/docker.sock:/var/run/docker.sock
+      docker run \
+        --env SOURCE_CODE="$PWD" \
+        --volume "$PWD":/code \
+        --volume /var/run/docker.sock:/var/run/docker.sock \
         "registry.gitlab.com/gitlab-org/security-products/codequality:$SP_VERSION" /code
   artifacts:
     reports:
       codequality: gl-code-quality-report.json
   tags:
-    - docker
+  - shell
