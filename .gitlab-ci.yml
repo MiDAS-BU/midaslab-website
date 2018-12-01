@@ -2,50 +2,12 @@ stages:
 - test
 - release
 
-tidy:
-  image: dbogatov/docker-images:tidy-latest
-  stage: test
-  before_script:
-  - http-server ./website -p 8080 > /dev/null &
-  - sleep 5
-  script:
-  - curl -Ls http://localhost:8080/index.html | tidy -e
-  tags:
-  - docker
-  
-blc:
-  image: dbogatov/docker-images:blc-latest
-  stage: test
-  before_script:
-  - http-server ./website -p 8080 > /dev/null &
-  - sleep 5
-  script:
-  - blc --filter-level 3 --input http://localhost:8080/index.html -rog --exclude "*linkedin.*" --exclude *facebook.* | tee blc.out
-  - "cat blc.out | grep '0 broken.'"
-  tags:
-  - docker
+variables:
+  INDEX: "index.html"
+  REPO: "templates/simple-webpage"
 
-# SETUP YOURSELF
-dockerify:
-  stage: release
-  script:
-  - docker build -t registry.dbogatov.org/templates/simple-webpage .
-  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.dbogatov.org
-  - docker push registry.dbogatov.org/templates/simple-webpage
-  tags:
-  - shell
-
-pages:
-  image: dbogatov/docker-images:alpine-extras-latest
-  stage: release
-  script:
-  - mv website public
-  - echo "Uploading files to pages"
-  artifacts:
-    expire_in: 30 min
-    paths:
-    - public
-  tags:
-  - docker
-  only:
-  - master
+include:
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
