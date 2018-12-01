@@ -38,3 +38,5 @@ sast:
   artifacts:
     reports:
       sast: gl-sast-report.json
+  tags:
+  - shell
