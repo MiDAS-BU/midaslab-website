@@ -27,21 +27,28 @@ include:
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/deps-scan.yml'
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/container-scan.yml'
 # - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/dast.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/license-check.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
-license-check:
+performance:
   stage: quality-security
-  image:
-    name: "registry.gitlab.com/gitlab-org/security-products/license-management:$CI_SERVER_VERSION_MAJOR-$CI_SERVER_VERSION_MINOR-stable"
-    entrypoint: [""]
-  stage: test
-  allow_failure: true
+  image: docker:git
+  variables:
+    URL: "https://review:$AUTHPASSWORD@$CI_BUILD_REF_NAME-$CI_PROJECT_NAME.review.dbogatov.org"
+  services:
+    - docker:stable-dind
   script:
-    - /run.sh analyze .
+    - mkdir gitlab-exporter
+    - wget -O ./gitlab-exporter/index.js https://gitlab.com/gitlab-org/gl-performance/raw/master/index.js
+    - mkdir sitespeed-results
+    - docker run --shm-size=1g --rm -v "$(pwd)":/sitespeed.io sitespeedio/sitespeed.io:6.3.1 --plugins.add ./gitlab-exporter --outputFolder sitespeed-results $URL
+    - mv sitespeed-results/data/performance.json performance.json
   artifacts:
+    paths:
+      - sitespeed-results/
     reports:
-      license_management: gl-license-management-report.json
+      performance: performance.json
   tags:
-    - docker
+  - docker
