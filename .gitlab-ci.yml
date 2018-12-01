@@ -31,6 +31,7 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
 container-scan:
+  stage: quality-security
   image: docker:stable
   variables:
     DOCKER_DRIVER: overlay2
@@ -56,3 +57,5 @@ container-scan:
   artifacts:
     reports:
       container_scanning: gl-container-scanning-report.json
+  tags:
+  - docker
