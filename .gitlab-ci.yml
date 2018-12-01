@@ -4,8 +4,10 @@ stages:
 - review
 - quality-security
 - release
+- deploy
 
 variables:
+  URL: "example.com" # if you include 'website-deploy'
   INDEX: "index.html"
   REPO: "templates/simple-webpage"
   AUTHPASSWORD: "example" # change to "" (empty string) to disable authentication
@@ -32,3 +34,5 @@ include:
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
+
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/trigger-websites-deploy.yml'
