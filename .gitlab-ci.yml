@@ -1,4 +1,5 @@
 stages:
+- build
 - test
 - build-review
 - review
@@ -37,3 +38,11 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/trigger-websites-deploy.yml'
+
+build:
+  image: dbogatov/docker-images:alpine-extras-latest
+  stage: build
+  script:
+  - echo "Build"
+  tags:
+  - docker
