@@ -3,6 +3,7 @@ stages:
 - build-review
 - review
 - quality-security
+- cleanup
 - release
 - deploy
 
