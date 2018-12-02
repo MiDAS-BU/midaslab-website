@@ -11,6 +11,7 @@ stages:
 variables:
   URL: "example.com" # if you include 'website-deploy'
   INDEX: "index.html"
+  DIST: "website"
   REPO: "templates/simple-webpage"
   AUTHPASSWORD: "example" # change to "" (empty string) to disable authentication
   # username is always "review" (without quotes)
