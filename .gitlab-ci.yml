@@ -35,7 +35,7 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/license-check.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/performance.yml'
 
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/dockerify.yml'
+- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/release-docker.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/trigger-websites-deploy.yml'
