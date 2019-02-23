@@ -15,7 +15,7 @@
 
 	<!-- Parallax File -->
 	<script type="text/javascript" src="js/parallax.min.js"></script>
-
+	
 	<!-- Royal Preloader -->
 	<script type="text/javascript" src="js/royal_preloader.min.js"></script>
 	<script type="text/javascript">
@@ -99,7 +99,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#home" data-id="home" class="scroll-link">Home</a></li>
+							<li><a href="#carousel-fixed" data-id="carousel-fixed" class="scroll-link">Home</a></li>
 							<li><a href="#ideology" data-id="ideology" class="scroll-link">Ideology</a></li>
 							<li><a href="#services" data-id="services" class="scroll-link">Services</a></li>
 							<li><a href="#about" data-id="about" class="scroll-link">About</a></li>
@@ -125,28 +125,38 @@
 	</header>
 	<!-- End Header -->
 
-	<!-- Begin Jumbotron -->
-	<div class="jumbotron jumbotron-main" id="home">
-		<div id="particles-js"></div><!-- /.particles div -->
-		<div class="container center-vertically-holder">
-			<div class="center-vertically">
-				<div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
-					<h1 class="scaleReveal">
-						A template with a bit of a different <strong>look &amp; feel</strong>.
-					</h1>
-					<hr class="bottomReveal">
-					<p class="bottomReveal">Particles is a fun and multipurpose template, with clean &amp; modern design <i>+</i>&nbsp; code.</p>
-					<a href="#ideology" data-id="ideology" class="scroll-link">
-						<div class="scroll-indicator rotateBottomReveal">
-							<span class="ion-mouse"></span><br>
-							<span class="ion-android-arrow-down arrow-scroll-indicator"></span>
-						</div>
-					</a>
-				</div><!-- /.column -->
-			</div><!-- /.vertical center -->
-		</div><!-- /.container -->
+	<!-- Begin Carousel -->
+	<div id="carousel-fixed" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators carousel-indicators-caption hidden-lg hidden-md">
+			<li data-target="#carousel-fixed" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-fixed" data-slide-to="1"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img class="img-responsive" src="images/small-slider1.jpg" alt="Carousel Image 1">
+				<div class="carousel-caption hidden-xs">
+                    <h3 class="no-margin">Slide Title</h3>
+                </div>
+			</div>
+			<div class="item">
+				<img class="img-responsive" src="images/small-slider2.jpg" alt="Carousel Image 2">
+				<div class="carousel-caption hidden-xs">
+                    <h3 class="no-margin">Slide Title 2</h3>
+                </div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-fixed" role="button" data-slide="prev">
+			<span class="ion-ios-arrow-left carousel-arrow-left" aria-hidden="true"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-fixed" role="button" data-slide="next">
+			<span class="ion-ios-arrow-right carousel-arrow-right" aria-hidden="true"></span>
+		</a>
 	</div>
-	<!-- End Jumbotron -->
+	<!-- End Carousel -->
 
 	<!-- Begin Intro -->
 	<section id="ideology">
@@ -578,7 +588,7 @@
 	<!-- End About -->
 
 	<!-- Begin Our Count -->
-	<section id="ourcount" class="section-padding parallax-window our-count" data-parallax="scroll" data-image-src="images/slider1.jpg">
+	<section id="ourcount" class="section-padding parallax-window" data-parallax="scroll" data-image-src="images/slider1.jpg">
 		<div class="container">
 			<div class="row mb30">
 				<div class="section-title col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
