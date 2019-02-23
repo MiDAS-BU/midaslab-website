@@ -25,11 +25,11 @@ include:
     file: 'empty-build.yml'
 
   # TEST
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/tidy.yml'
+  # - project: 'templates/ci-snippets'
+  #   file: 'simple-website/tidy.yml'
 
-  - project: 'templates/ci-snippets'
-    file: 'simple-website/blc.yml'
+  # - project: 'templates/ci-snippets'
+  #   file: 'simple-website/blc.yml'
 
   # BUILD-REVIEW
   - project: 'templates/ci-snippets'
