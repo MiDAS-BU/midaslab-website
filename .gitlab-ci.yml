@@ -3,7 +3,7 @@ stages:
 - test
 - build-review
 - review
-# - quality-security
+- quality-security
 - cleanup
 - release
 - deploy
@@ -18,8 +18,8 @@ variables:
 include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
 
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/tidy.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/blc.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/build-review.yml'
 
