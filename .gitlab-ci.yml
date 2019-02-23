@@ -3,18 +3,17 @@ stages:
 - test
 - build-review
 - review
-- quality-security
+# - quality-security
 - cleanup
 - release
 - deploy
 
 variables:
-  URL: "example.com" # if you include 'website-deploy'
+  URL: "budata.dbogatov.org" # if you include 'website-deploy'
   INDEX: "index.html"
   DIST: "website"
-  REPO: "templates/simple-webpage"
-  AUTHPASSWORD: "example" # change to "" (empty string) to disable authentication
-  # username is always "review" (without quotes)
+  REPO: "bu/data-lab/website"
+  AUTHPASSWORD: ""
 
 include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/before-script.yml'
@@ -27,13 +26,13 @@ include:
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/review.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/review/stop-review.yml'
 
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/code-quality.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/sast.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/deps-scan.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/container-scan.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/dast.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/license-check.yml'
-- 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/performance.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/code-quality.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/sast.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/deps-scan.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/container-scan.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/dast.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/license-check.yml'
+# - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/quality-security/performance.yml'
 
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/release-docker.yml'
 - 'https://git.dbogatov.org/templates/ci-snippets/raw/master/simple-website/pages.yml'

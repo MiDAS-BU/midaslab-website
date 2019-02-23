@@ -578,7 +578,7 @@
 	<!-- End About -->
 
 	<!-- Begin Our Count -->
-	<section id="ourcount" class="section-padding parallax-window our-count" data-parallax="scroll" data-image-src="images/slider1.jpg">
+	<section id="ourcount" class="section-padding parallax-window" data-parallax="scroll" data-image-src="images/slider1.jpg">
 		<div class="container">
 			<div class="row mb30">
 				<div class="section-title col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center">
@@ -1209,27 +1209,13 @@
 	</section><!-- /.section -->
 	<!-- End Contact -->
 
-	<!-- Begin Map -->
-	<div id="map"></div>
-	<!-- End Map -->
-
 	<!-- Begin Footer -->
-	<footer class="footer-padding">
+	<footer class="background1 footer-padding">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2 text-center">
-					<span class="icon-handle-streamline-vector logo"></span>
-					<h2 class="theme-title">Particles<span class="theme-title-smaller">Theme</span></h2>
-					<a href="#"><span class="ion-social-twitter social-icons-dark-hover mr15"></span></a>
-	                <a href="#"><span class="ion-social-facebook social-icons-dark-hover mr15"></span></a>
-	                <a href="#"><span class="ion-social-googleplus-outline social-icons-dark-hover"></span></a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2 text-small text-center">
-					<hr>
-					<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
-					<p class="no-margin">&copy; Denis Samardjiev</p>
+				<div class="col-sm-12 text-center">
+					<p class="text-small">Crafted with <span class="text-switch ion-heart"></span> by Denis Samardjiev</p>
+					<p class="text-switch no-margin">&copy; 2016</p>
 				</div><!-- /.column -->
 			</div><!-- /.row -->
 		</div><!-- /.container -->
@@ -1238,28 +1224,6 @@
 
 	<!-- Javascript Files -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M&callback=initMap" async defer></script>
-    <script type="text/javascript">
-		/* ---- Google Maps ---- */
-        function initMap() {
-            var mapOptions = {
-                zoom: 15,
-				zoomControl: false,
-				scaleControl: false,
-				scrollwheel: false,
-				disableDoubleClickZoom: true,
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-                styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Our Office!'
-            });
-        }
-    </script>
 	<script type="text/javascript" src="js/particles.min.js"></script>
 	<script type="text/javascript" src="js/particlesRun.js"></script>
 	<script type="text/javascript" src="js/jquery.mixitup.js"></script>
