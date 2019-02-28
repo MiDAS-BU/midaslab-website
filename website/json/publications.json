@@ -1,0 +1,40 @@
+[{
+		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
+		"authors": "Dmytro Bogatov, George Kollios and Leonid Reyzin",
+		"venue": "Submitted to VLDB",
+		"date": {
+			"month": 3,
+			"year": 2019
+		},
+		"links": {
+			"pdf": "https://dbogatov.org/assets/custom/docs/ore-benchmark.pdf",
+			"abstract": "https://ia.cr/2018/953"
+		}
+	},
+	{
+		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
+		"authors": "Dmytro Bogatov, George Kollios and Leonid Reyzin",
+		"venue": "Submitted to VLDB",
+		"date": {
+			"month": 3,
+			"year": 2019
+		},
+		"links": {
+			"pdf": "https://dbogatov.org/assets/custom/docs/ore-benchmark.pdf",
+			"abstract": "https://ia.cr/2018/953"
+		}
+	},
+	{
+		"title": "A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes and Protocols",
+		"authors": "Dmytro Bogatov, George Kollios and Leonid Reyzin",
+		"venue": "Submitted to VLDB",
+		"date": {
+			"month": 3,
+			"year": 2019
+		},
+		"links": {
+			"pdf": "https://dbogatov.org/assets/custom/docs/ore-benchmark.pdf",
+			"abstract": "https://ia.cr/2018/953"
+		}
+	}
+]
