@@ -1,56 +1,72 @@
-[{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-},{
-	"name": "Dmytro Bogatov",
-	"image": "images/team-member-1.jpg",
-	"position": "PhD student",
-	"website": "https://dbogatov.org/"
-}]
+{
+	"categories": [{
+			"name": "Faculty",
+			"id": "faculty"
+		},
+		{
+			"name": "Researchers",
+			"id": "researchers"
+		}
+	],
+	"people": [{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "researchers"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "researchers"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "researchers"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "researchers"
+		}, {
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "researchers"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD faculty",
+			"website": "https://dbogatov.org/",
+			"category": "faculty"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD faculty",
+			"website": "https://dbogatov.org/",
+			"category": "faculty"
+		}, {
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD faculty",
+			"website": "https://dbogatov.org/",
+			"category": "faculty"
+		}, {
+			"name": "Dmytro Bogatov",
+			"image": "images/team-member-1.jpg",
+			"position": "PhD faculty",
+			"website": "https://dbogatov.org/",
+			"category": "faculty"
+		}
+	]
+}

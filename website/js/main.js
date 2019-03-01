@@ -123,7 +123,7 @@ $(document).ready(function () {
 		$publicationsContainer.empty();
 		$publicationsContainer.html(publicationsHtmlContent);
 	});
-	
+
 	$.getJSON("json/people.json", people => {
 
 		var peopleTemplate = _.template(" \
@@ -140,15 +140,27 @@ $(document).ready(function () {
 			</div> \
 		");
 
-		var peopleHtmlContent = people
-			.map(publication => peopleTemplate(publication))
+		var categoryTemplate = _.template(" \
+			<h2 class=\"text-center mt40 mb40\"><%= name %></h2> \
+			<%= content %> \
+		");
+
+		var peopleHtmlContent = people.categories
+			.map(category => {
+				category.content = people.people
+					.filter(person => person.category == category.id)
+					.map(person => peopleTemplate(person))
+					.reduce((accum, self) => accum + self);
+
+				return categoryTemplate(category)
+			})
 			.reduce((accum, self) => accum + self);
 
 		$peopleContainer = $("#people");
 		$peopleContainer.empty();
 		$peopleContainer.html(peopleHtmlContent);
 	});
-	
-	
-	
+
+
+
 });
