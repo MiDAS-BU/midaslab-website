@@ -4,16 +4,16 @@
 			"id": "faculty"
 		},
 		{
-			"name": "Researchers",
-			"id": "researchers"
+			"name": "Students",
+			"id": "students"
 		}
 	],
 	"people": [{
-			"name": "Dmytro Bogatov",
+			"name": "George Kollios",
 			"image": "images/team-member-1.jpg",
-			"position": "PhD student",
-			"website": "https://dbogatov.org/",
-			"category": "researchers"
+			"position": "Professor",
+			"website": "http://www.cs.bu.edu/fac/gkollios/",
+			"category": "faculty"
 		},
 		{
 			"name": "Dmytro Bogatov",
