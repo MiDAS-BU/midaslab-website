@@ -8,64 +8,81 @@
 			"id": "students"
 		}
 	],
-	"people": [{
+	"people": [
+		{
+			"name": "Konstantinos Ameranis",
+			"image": "images/people/ameranis.jpeg",
+			"position": "PhD student",
+			"website": "http://cs-people.bu.edu/ameranis/",
+			"category": "students"
+		},
+		{
+			"name": "Dmytro Bogatov",
+			"image": "images/people/dmytro.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "students"
+		},
+		{
+			"name": "Harshal Chaudhari",
+			"image": "images/people/harshal.jpg",
+			"position": "PhD student",
+			"website": "http://cs-people.bu.edu/harshal/",
+			"category": "students"
+		},
+		{
+			"name": "Sofia Maria Nikolakaki",
+			"image": "images/people/sofia.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "students"
+		}, 
+		{
+			"name": "Bashir Rastegarpanah",
+			"image": "images/people/bashir.jpg",
+			"position": "PhD student",
+			"website": "https://dbogatov.org/",
+			"category": "students"
+		}, 
+		{
+			"name": "Konstantinos Sotiropoulos",
+			"image": "images/people/sotiropoulos.jpg",
+			"position": "PhD student",
+			"website": "http://cs-people.bu.edu/ksotirop/",
+			"category": "students"
+		}, 
+		{
+			"name": "Isidora Tourni",
+			"image": "images/people/isidora.jpg",
+			"position": "PhD student",
+			"website": "http://cs-people.bu.edu/isidora/",
+			"category": "students"
+		},
+		{
+			"name": "Manos Athanassoulis",
+			"image": "images/people/manos-portrait.jpg",
+			"position": "Assistant Professor",
+			"website": "http://manos.athanassoulis.net/",
+			"category": "faculty"
+		},
+		{
 			"name": "George Kollios",
-			"image": "images/team-member-1.jpg",
+			"image": "images/people/kollios.jpg",
 			"position": "Professor",
 			"website": "http://www.cs.bu.edu/fac/gkollios/",
 			"category": "faculty"
 		},
 		{
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD student",
-			"website": "https://dbogatov.org/",
-			"category": "researchers"
-		},
-		{
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD student",
-			"website": "https://dbogatov.org/",
-			"category": "researchers"
-		},
-		{
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD student",
-			"website": "https://dbogatov.org/",
-			"category": "researchers"
-		}, {
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD student",
-			"website": "https://dbogatov.org/",
-			"category": "researchers"
-		},
-		{
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD faculty",
-			"website": "https://dbogatov.org/",
-			"category": "faculty"
-		},
-		{
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD faculty",
-			"website": "https://dbogatov.org/",
+			"name": "Evimaria Terzi",
+			"image": "images/people/evimaria.jpg",
+			"position": "Associate Professor",
+			"website": "https://www.cs.bu.edu/~evimaria/",
 			"category": "faculty"
 		}, {
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
+			"name": "Charalampos Tsourakakis",
+			"image": "images/people/babis.jpg",
 			"position": "PhD faculty",
-			"website": "https://dbogatov.org/",
-			"category": "faculty"
-		}, {
-			"name": "Dmytro Bogatov",
-			"image": "images/team-member-1.jpg",
-			"position": "PhD faculty",
-			"website": "https://dbogatov.org/",
+			"website": "https://tsourakakis.com/",
 			"category": "faculty"
 		}
 	]
