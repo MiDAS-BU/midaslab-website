@@ -98,26 +98,48 @@ $(document).ready(function () {
 	$.getJSON("json/publications.json", publications => {
 
 		var publicationsTemplate = _.template(" \
-			<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\"> \
+			<div class=\"col-xs-12 col-sm-12 col-md-6 col-lg-6\"> \
 				<h3><%= title %></h3> \
 				<p> \
 					<%= authors %> \
 					<br> \
-					<%= venue %>, <%= date.monthTxt %> <%= date.year %> | <a target=\"_blank\" href=\"<%= links.pdf %>\">Download PDF</a> | <a target=\"_blank\" href=\"<%= links.abstract %>\">View Abstract</a> \
+					<%= venue %>, <%= date.monthTxt %> <%= date.year %> \
+					<%= typeof(links) !== 'undefined' && typeof(links.pdf) !== 'undefined' ? '| <a target=\"_blank\" href=\"' + links.pdf + '\">Download PDF</a>' : '' %> \
+					<%= typeof(links) !== 'undefined' && typeof(links.abstract) !== 'undefined' ? '| <a target=\"_blank\" href=\"' + links.abstract + '\">View Abstract</a>' : '' %> \
 				</p> \
 			</div> \
 		");
-
-		publications = publications.sort((a, b) => a.date.year * 100 + a.date.month < b.date.year * 100 + b.date.month);
+		publications = publications.sort((a, b) => a.date.year * 100 + (a.date.month != 'undefined' ? a.date.month : 0) < b.date.year * 100 + (b.date.month != 'undefined' ? b.date.month : 0));
 		publications = publications.slice(0, publicationsDisplayed);
 
-		var publicationsHtmlContent = publications
+		var publicationHtmlContent = publications
 			.map(publication => {
-				publication.date.monthTxt = months[publication.date.month];
+				publication.date.monthTxt = publication.date.month != 'undefined' ? months[publication.date.month] : "";
 
-				return publicationsTemplate(publication)
-			})
-			.reduce((accum, self) => accum + self);
+				return publicationsTemplate(publication);
+			});
+
+		publicationsHtmlContent = "";
+		const inSmall = 1;
+		const inMed = 2;
+		const inLarge = 2;
+		for (let index = 1; index <= publicationHtmlContent.length; index++) {
+			const publication = publicationHtmlContent[index - 1];
+			publicationsHtmlContent += publication;
+			var clearfix = "";
+			if (index % inSmall == 0) {
+				clearfix += " visible-sm";
+			}
+			if (index % inMed == 0) {
+				clearfix += " visible-md";
+			}
+			if (index % inLarge == 0) {
+				clearfix += " visible-lg";
+			}
+			if (clearfix !== "") {
+				publicationsHtmlContent += "<div class=\"clearfix" + clearfix + "\"></div>";
+			}
+		}
 
 		$publicationsContainer = $("#publications");
 		$publicationsContainer.empty();
@@ -141,8 +163,10 @@ $(document).ready(function () {
 		");
 
 		var categoryTemplate = _.template(" \
-			<h2 class=\"text-center mt40 mb40\"><%= name %></h2> \
-			<%= content %> \
+			<h2 class=\"text-center mt40 mb40\"><%= name %> <%= hidden ? '| <a class=\"people-toggle\" id=\"people-toggle-'+id+'\">expand</a>' : '' %></h2> \
+			<div id=\"section-people-toggle-<%= id %>\" class=\"row <%= hidden ? 'people-hidden' : '' %>\"> \
+				<%= content %> \
+			</div> \
 		");
 
 		var peopleHtmlContent = people.categories
@@ -159,8 +183,19 @@ $(document).ready(function () {
 		$peopleContainer = $("#people");
 		$peopleContainer.empty();
 		$peopleContainer.html(peopleHtmlContent);
+
+		$(".people-toggle").click(
+			function () {
+				var id = $(this).attr('id');
+				if ($(this).text() === "expand") {
+					$(this).text("collapse");
+					$("#section-"+id).show();
+				} else {
+					$(this).text("expand");
+					$("#section-"+id).hide();
+				}
+			}
+		);
+		$(".people-hidden").hide();
 	});
-
-
-
 });

@@ -1,15 +1,21 @@
 {
 	"categories": [{
 			"name": "Faculty",
-			"id": "faculty"
+			"id": "faculty",
+			"hidden": false
 		},
 		{
 			"name": "Students",
-			"id": "students"
+			"id": "students",
+			"hidden": false
+		},
+		{
+			"name": "Alumni",
+			"id": "alumni",
+			"hidden": true
 		}
 	],
-	"people": [
-		{
+	"people": [{
 			"name": "Konstantinos Ameranis",
 			"image": "images/people/ameranis.jpeg",
 			"position": "PhD student",
@@ -36,21 +42,21 @@
 			"position": "PhD student",
 			"website": "https://dbogatov.org/",
 			"category": "students"
-		}, 
+		},
 		{
 			"name": "Bashir Rastegarpanah",
 			"image": "images/people/bashir.jpg",
 			"position": "PhD student",
 			"website": "https://dbogatov.org/",
 			"category": "students"
-		}, 
+		},
 		{
 			"name": "Konstantinos Sotiropoulos",
 			"image": "images/people/sotiropoulos.jpg",
 			"position": "PhD student",
 			"website": "http://cs-people.bu.edu/ksotirop/",
 			"category": "students"
-		}, 
+		},
 		{
 			"name": "Isidora Tourni",
 			"image": "images/people/isidora.jpg",
@@ -84,6 +90,20 @@
 			"position": "PhD faculty",
 			"website": "https://tsourakakis.com/",
 			"category": "faculty"
+		},
+		{
+			"name": "Charalampos Tsourakakis",
+			"image": "images/people/babis.jpg",
+			"position": "PhD faculty",
+			"website": "https://tsourakakis.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Charalampos Tsourakakis",
+			"image": "images/people/babis.jpg",
+			"position": "PhD faculty",
+			"website": "https://tsourakakis.com/",
+			"category": "alumni"
 		}
 	]
 }
