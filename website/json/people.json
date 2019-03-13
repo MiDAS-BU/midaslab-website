@@ -92,17 +92,101 @@
 			"category": "faculty"
 		},
 		{
-			"name": "Charalampos Tsourakakis",
-			"image": "images/people/babis.jpg",
-			"position": "PhD faculty",
-			"website": "https://tsourakakis.com/",
+			"name": "Charalampos Mavroforakis",
+			"image": "images/people/harry.png",
+			"position": "PhD (Now at Facebook)",
+			"website": "http://cs-people.bu.edu/cmav/",
 			"category": "alumni"
 		},
 		{
-			"name": "Charalampos Tsourakakis",
-			"image": "images/people/babis.jpg",
-			"position": "PhD faculty",
-			"website": "https://tsourakakis.com/",
+			"name": "Sanaz Bahargam",
+			"image": "images/people/sanaz.jpg",
+			"position": "PhD (Now at Twitter)",
+			"website": "http://cs-people.bu.edu/bahargam/",
+			"category": "alumni"
+		},
+		{
+			"name": "Natali Ruchansky",
+			"image": "images/people/natali.jpg",
+			"position": "PhD (Now at Netflix)",
+			"website": "http://natalir.space/",
+			"category": "alumni"
+		},
+		{
+			"name": "Behzad Golshan",
+			"image": "images/people/behzad.jpeg",
+			"position": "PhD (Now at Megagon Labs)",
+			"website": "http://behzad.io/",
+			"category": "alumni"
+		},
+		{
+			"name": "Xianrui Meng",
+			"image": "images/people/xianrui.jpg",
+			"position": "PhD (Now at Apple)",
+			"website": "http://www.xianruimeng.org/",
+			"category": "alumni"
+		},
+		{
+			"name": "Haohan Zhu",
+			"image": "images/people/haohan.jpg",
+			"position": "PhD (Now at Facebook)",
+			"website": "http://zhuhaohan.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Dora Erdos",
+			"image": "images/people/dori.jpg",
+			"position": "PhD (Now Lecturer at Boston University)",
+			"website": "http://cs-people.bu.edu/edori/",
+			"category": "alumni"
+		},
+		{
+			"name": "Esther Galbrun",
+			"image": "images/people/esther.jpg",
+			"position": "Post-Doc (Now Post-Doc at Aalto University)",
+			"website": "https://members.loria.fr/EGalbrun/",
+			"category": "alumni"
+		},
+		{
+			"name": "Theodoros Lappas",
+			"image": "images/people/ted.jpg",
+			"position": "Post-Doc (Now Assistant Professor at Stevens Institute of Technology)",
+			"website": "http://tedlappas.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Vassilis Athitsos",
+			"image": "images/people/vassilis.jpg",
+			"position": "Post-Doc (Now Professor at U of Texas at Arlington)",
+			"website": "http://vlm1.uta.edu/~athitsos/",
+			"category": "alumni"
+		},
+		{
+			"name": "Marios Hadjieleftheriou",
+			"image": "images/people/marios.gif",
+			"position": "Post-Doc (Now Lion Cave Capital)",
+			"website": "http://hadjieleftheriou.com/",
+			"category": "alumni"
+		},
+		{
+			"name": "Feifei Li",
+			"image": "images/people/feifei.jpg",
+			"position": "PhD (Now Professor at U of Utah)",
+			"website": "http://www.cs.utah.edu/~lifeifei/",
+			"category": "alumni"
+		},
+		{
+			"name": "Panagiotis Papapetrou",
+			"image": "images/people/panagiotis.jpg",
+			"position": "PhD (Now Professor at Stockholm University)",
+			"website": "https://papapetrou.blogs.dsv.su.se/",
+			"category": "alumni"
+		},
+		{
+			"name": "Michalis Potamias",
+			"image": "images/people/michalis.jpg",
+			"position": "PhD (Now Professor at Google)",
+			"website": "https://www.linkedin.com/in/mpotamias/",
 			"category": "alumni"
 		}
 	]
