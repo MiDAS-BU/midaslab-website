@@ -5,6 +5,11 @@
 			"hidden": false
 		},
 		{
+			"name": "Post-Doc",
+			"id": "postdoc",
+			"hidden": false
+		},
+		{
 			"name": "Students",
 			"id": "students",
 			"hidden": false
@@ -63,6 +68,13 @@
 			"position": "PhD student",
 			"website": "http://cs-people.bu.edu/isidora/",
 			"category": "students"
+		},
+		{
+			"name": "Subhadeep Sarkar",
+			"image": "images/people/subjadeep.jpeg",
+			"position": "Post-Doc",
+			"website": "https://subhadeepsarkar.bitbucket.io/",
+			"category": "postdoc"
 		},
 		{
 			"name": "Manos Athanassoulis",
