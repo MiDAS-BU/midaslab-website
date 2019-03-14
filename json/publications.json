@@ -3,7 +3,6 @@
 		"authors": "Dmytro Bogatov, George Kollios and Leonid Reyzin",
 		"venue": "Submitted to VLDB",
 		"date": {
-			"month": 3,
 			"year": 2019
 		},
 		"links": {
@@ -12,11 +11,15 @@
 		}
 	},
 	{
-		"title": "Collective recommendations",
+		"title": "Recommendations for optimizing the collective user experience",
 		"authors": "Behzad Golshan, Evimaria Terzi, Panayiotis Tsaparas",
 		"venue": "SIAM SDM",
 		"date": {
 			"year": 2019
+		},
+		"links": {
+			"pdf": "",
+			"abstract": ""
 		}
 	},
 	{
@@ -27,7 +30,8 @@
 			"year": 2019
 		},
 		"links": {
-			"pdf": "https://arxiv.org/pdf/1811.05015.pdf"
+			"pdf": "https://arxiv.org/pdf/1811.05015.pdf",
+			"abstract": "https://www.sciencedirect.com/science/article/pii/S0957417418307048"
 		}
 	},
 	{
@@ -38,7 +42,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://delivery.acm.org/10.1145/3280000/3276980/a16-dayan.pdf?ip=155.41.101.120&id=3276980&acc=ACTIVE%20SERVICE&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1551984214_948b63dea0a99031657ff2111b173f67"
+			"pdf": "http://delivery.acm.org/10.1145/3280000/3276980/a16-dayan.pdf?ip=155.41.101.120&id=3276980&acc=ACTIVE%20SERVICE&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1551984214_948b63dea0a99031657ff2111b173f67",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3276980"
 		}
 	},
 	{
@@ -49,7 +54,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://sites.computer.org/debull/A18sept/p64.pdf"
+			"pdf": "http://sites.computer.org/debull/A18sept/p64.pdf",
+			"abstract": "https://www.semanticscholar.org/paper/The-Periodic-Table-of-Data-Structures-Idreos-Zoumpatianos/67296e6cd0084c301339889c4ef1f71a04406b3d"
 		}
 	},
 	{
@@ -60,7 +66,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8509261"
+			"pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8509261",
+			"abstract":"https://www.semanticscholar.org/paper/Top-k-Query-Processing-on-Encrypted-Databases-with-Meng-Zhu/c84fdc7dbc59f27ada6601f93cbb6aa98dba2122"
 		}
 	},
 	{
@@ -71,7 +78,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://chato.cl/papers/anagnostopoulos_castillo_fazzone_leonardi_terzi_2017_outsourcing_hiring_online_algorithms.pdf"
+			"pdf": "http://chato.cl/papers/anagnostopoulos_castillo_fazzone_leonardi_terzi_2017_outsourcing_hiring_online_algorithms.pdf",
+			"abstract":"https://dl.acm.org/citation.cfm?id=3220056"
 		}
 	},
 	{
@@ -82,7 +90,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "https://arxiv.org/pdf/1801.07722.pdf"
+			"pdf": "https://arxiv.org/pdf/1801.07722.pdf",
+			"abstract":"https://arxiv.org/abs/1801.07722"
 		}
 	},
 	{
@@ -93,7 +102,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://delivery.acm.org/10.1145/3160000/3159721/p90-chaudhari.pdf?ip=155.41.101.120&id=3159721&acc=TRUSTED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EE47D41B086F0CDA3&__acm__=1551985199_20dc54cf3d048686818d48bd55820e60"
+			"pdf": "http://delivery.acm.org/10.1145/3160000/3159721/p90-chaudhari.pdf?ip=155.41.101.120&id=3159721&acc=TRUSTED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EE47D41B086F0CDA3&__acm__=1551985199_20dc54cf3d048686818d48bd55820e60",
+			"abstract":"https://dl.acm.org/citation.cfm?id=3159721"
 		}
 	},
 	{
@@ -104,7 +114,8 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://www.smnikolakaki.com/mining_tours_and_paths.pdf"
+			"pdf": "http://www.smnikolakaki.com/mining_tours_and_paths.pdf",
+			"abstract":"https://dl.acm.org/citation.cfm?id=3178876.3186112"
 		}
 	},
 	{
@@ -115,7 +126,8 @@
 			"year": 2017
 		},
 		"links": {
-			"pdf": "http://www.vldb.org/pvldb/vol10/p1106-olma.pdf"
+			"pdf": "http://www.vldb.org/pvldb/vol10/p1106-olma.pdf",
+			"abstract":"https://dl.acm.org/citation.cfm?id=3115415"
 		}
 	},
 	{
@@ -126,7 +138,8 @@
 			"year": 2017
 		},
 		"links": {
-			"pdf": "http://www.vldb.org/pvldb/vol10/p697-zhu.pdf"
+			"pdf": "http://www.vldb.org/pvldb/vol10/p697-zhu.pdf",
+			"abstract":"https://dl.acm.org/citation.cfm?id=3055330.3055336"
 		}
 	},
 	{
@@ -137,7 +150,8 @@
 			"year": 2017
 		},
 		"links": {
-			"pdf": "https://arxiv.org/pdf/1706.01552.pdf"
+			"pdf": "https://arxiv.org/pdf/1706.01552.pdf",
+			"abstract":"https://arxiv.org/abs/1706.01552"
 		}
 	},
 	{
@@ -148,7 +162,8 @@
 			"year": 2016
 		},
 		"links": {
-			"pdf": "http://delivery.acm.org/10.1145/2920000/2915964/p1319-athanassoulis.pdf?ip=155.41.101.120&id=2915964&acc=AUTHOR-IZED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EB44754C3705C802D&__acm__=1551984067_26af2438f770c10c582204bf265cce43"
+			"pdf": "http://delivery.acm.org/10.1145/2920000/2915964/p1319-athanassoulis.pdf?ip=155.41.101.120&id=2915964&acc=AUTHOR-IZED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EB44754C3705C802D&__acm__=1551984067_26af2438f770c10c582204bf265cce43",
+			"abstract":"https://dl.acm.org/citation.cfm?id=2915964"
 		}
 	},
 	{
@@ -159,7 +174,8 @@
 			"year": 2016
 		},
 		"links": {
-			"pdf": "https://privacytools.seas.harvard.edu/files/privacytools/files/generic.pdf"
+			"pdf": "https://privacytools.seas.harvard.edu/files/privacytools/files/generic.pdf",
+			"abstract":"https://dl.acm.org/citation.cfm?id=2976749.2978386"
 		}
 	}
 ]
