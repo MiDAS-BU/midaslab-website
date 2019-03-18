@@ -77,10 +77,10 @@
 			"category": "postdoc"
 		},
 		{
-			"name": "Manos Athanassoulis",
-			"image": "images/people/manos.jpg",
-			"position": "Assistant Professor",
-			"website": "http://manos.athanassoulis.net/",
+			"name": "Evimaria Terzi",
+			"image": "images/people/evimaria.jpg",
+			"position": "Associate Professor",
+			"website": "https://www.cs.bu.edu/~evimaria/",
 			"category": "faculty"
 		},
 		{
@@ -91,12 +91,13 @@
 			"category": "faculty"
 		},
 		{
-			"name": "Evimaria Terzi",
-			"image": "images/people/evimaria.jpg",
-			"position": "Associate Professor",
-			"website": "https://www.cs.bu.edu/~evimaria/",
+			"name": "Manos Athanassoulis",
+			"image": "images/people/manos.jpg",
+			"position": "Assistant Professor",
+			"website": "http://manos.athanassoulis.net/",
 			"category": "faculty"
-		}, {
+		},
+		{
 			"name": "Charalampos Tsourakakis",
 			"image": "images/people/babis.jpg",
 			"position": "PhD faculty",

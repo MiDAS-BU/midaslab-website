@@ -171,10 +171,36 @@ $(document).ready(function () {
 
 		var peopleHtmlContent = people.categories
 			.map(category => {
-				category.content = people.people
+				var content = people.people
 					.filter(person => person.category == category.id)
-					.map(person => peopleTemplate(person))
-					.reduce((accum, self) => accum + self);
+					.map(person => peopleTemplate(person));
+
+				category.content = "";
+
+				const inXSmall = 1;
+				const inSmall = 2;
+				const inMed = 4;
+				const inLarge = 4;
+				for (let index = 1; index <= content.length; index++) {
+					const person = content[index - 1];
+					category.content += person;
+					var clearfix = "";
+					if (index % inXSmall == 0) {
+						clearfix += " visible-xs";
+					}
+					if (index % inSmall == 0) {
+						clearfix += " visible-sm";
+					}
+					if (index % inMed == 0) {
+						clearfix += " visible-md";
+					}
+					if (index % inLarge == 0) {
+						clearfix += " visible-lg";
+					}
+					if (clearfix !== "") {
+						category.content += "<div class=\"clearfix" + clearfix + "\"></div>";
+					}
+				}
 
 				return categoryTemplate(category)
 			})
@@ -189,10 +215,10 @@ $(document).ready(function () {
 				var id = $(this).attr('id');
 				if ($(this).text() === "expand") {
 					$(this).text("collapse");
-					$("#section-"+id).show();
+					$("#section-" + id).show();
 				} else {
 					$(this).text("expand");
-					$("#section-"+id).hide();
+					$("#section-" + id).hide();
 				}
 			}
 		);
