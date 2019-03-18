@@ -5,12 +5,7 @@
 			"hidden": false
 		},
 		{
-			"name": "Post-Doc",
-			"id": "postdoc",
-			"hidden": false
-		},
-		{
-			"name": "Students",
+			"name": "Graduate Students",
 			"id": "students",
 			"hidden": false
 		},
@@ -23,58 +18,58 @@
 	"people": [{
 			"name": "Konstantinos Ameranis",
 			"image": "images/people/ameranis.jpeg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "http://cs-people.bu.edu/ameranis/",
 			"category": "students"
 		},
 		{
 			"name": "Dmytro Bogatov",
 			"image": "images/people/dmytro.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "https://dbogatov.org/",
 			"category": "students"
 		},
 		{
 			"name": "Harshal Chaudhari",
 			"image": "images/people/harshal.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "http://cs-people.bu.edu/harshal/",
 			"category": "students"
 		},
 		{
 			"name": "Sofia Maria Nikolakaki",
 			"image": "images/people/sofia.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "https://dbogatov.org/",
 			"category": "students"
 		},
 		{
 			"name": "Bashir Rastegarpanah",
 			"image": "images/people/bashir.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "https://dbogatov.org/",
 			"category": "students"
 		},
 		{
 			"name": "Konstantinos Sotiropoulos",
 			"image": "images/people/sotiropoulos.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "http://cs-people.bu.edu/ksotirop/",
 			"category": "students"
 		},
 		{
 			"name": "Isidora Tourni",
 			"image": "images/people/isidora.jpg",
-			"position": "PhD student",
+			"position": "PhD Researcher",
 			"website": "http://cs-people.bu.edu/isidora/",
 			"category": "students"
 		},
 		{
 			"name": "Subhadeep Sarkar",
 			"image": "images/people/subjadeep.jpeg",
-			"position": "Post-Doc",
+			"position": "Postdoctoral Researcher",
 			"website": "https://subhadeepsarkar.bitbucket.io/",
-			"category": "postdoc"
+			"category": "students"
 		},
 		{
 			"name": "Evimaria Terzi",
@@ -100,7 +95,7 @@
 		{
 			"name": "Charalampos Tsourakakis",
 			"image": "images/people/babis.jpg",
-			"position": "PhD faculty",
+			"position": "Assistant Professor",
 			"website": "https://tsourakakis.com/",
 			"category": "faculty"
 		},

@@ -1,4 +1,4 @@
-const publicationsDisplayed = 10;
+const publicationsDisplayed = 12;
 
 /* ---- mixitup.js our work sorting ---- */
 $('#thework').mixItUp({
@@ -105,7 +105,7 @@ $(document).ready(function () {
 					<br> \
 					<%= venue %>, <%= date.monthTxt %> <%= date.year %> \
 					<%= typeof(links) !== 'undefined' && typeof(links.pdf) !== 'undefined' ? '| <a target=\"_blank\" href=\"' + links.pdf + '\">Download PDF</a>' : '' %> \
-					<%= typeof(links) !== 'undefined' && typeof(links.abstract) !== 'undefined' ? '| <a target=\"_blank\" href=\"' + links.abstract + '\">View Abstract</a>' : '' %> \
+					<%= typeof(links) !== 'undefined' && typeof(links.abstract) !== 'undefined' ? '| <a target=\"_blank\" href=\"' + links.abstract + '\">External link</a>' : '' %> \
 				</p> \
 			</div> \
 		");
@@ -163,7 +163,7 @@ $(document).ready(function () {
 		");
 
 		var categoryTemplate = _.template(" \
-			<h2 class=\"text-center mt40 mb40\"><%= name %> <%= hidden ? '| <a class=\"people-toggle\" id=\"people-toggle-'+id+'\">expand</a>' : '' %></h2> \
+			<h2 class=\"text-center mt40 mb40\"> <%= hidden ? '<a style=\"cursor: pointer; user-select: none;\" class=\"people-toggle\" data-shown=\"false\" id=\"people-toggle-'+id+'\">' : '' %> <%= name %>  <%= hidden ? '</a>' : '' %> </h2> \
 			<div id=\"section-people-toggle-<%= id %>\" class=\"row <%= hidden ? 'people-hidden' : '' %>\"> \
 				<%= content %> \
 			</div> \
@@ -171,9 +171,18 @@ $(document).ready(function () {
 
 		var peopleHtmlContent = people.categories
 			.map(category => {
-				var content = people.people
-					.filter(person => person.category == category.id)
-					.map(person => peopleTemplate(person));
+				var content = people.people.filter(person => person.category == category.id)
+
+				content.sort((a, b) => {
+					a = a.name.split(" ");
+					a = a[a.length - 1];
+
+					b = b.name.split(" ");
+					b = b[b.length - 1];
+
+					return a.localeCompare(b);
+				});
+				content = content.map(person => peopleTemplate(person));
 
 				category.content = "";
 
@@ -213,12 +222,12 @@ $(document).ready(function () {
 		$(".people-toggle").click(
 			function () {
 				var id = $(this).attr('id');
-				if ($(this).text() === "expand") {
-					$(this).text("collapse");
-					$("#section-" + id).show();
-				} else {
-					$(this).text("expand");
+				if ($(this).data('shown') === "true") {
+					$(this).data('shown', "false");
 					$("#section-" + id).hide();
+				} else {
+					$(this).data('shown', "true");
+					$("#section-" + id).show();
 				}
 			}
 		);
