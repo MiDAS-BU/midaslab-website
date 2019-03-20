@@ -1424,7 +1424,7 @@ ul.social-buttons li a:active {
 	font-weight: 700;
 	font-size: 42px;
 	color: #fff;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	border-bottom: 1px solid #fff;
 	padding-bottom: 4px;
 	display: inline-block;
