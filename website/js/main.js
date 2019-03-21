@@ -174,12 +174,27 @@ $(document).ready(function () {
 				var content = people.people.filter(person => person.category == category.id)
 
 				content.sort((a, b) => {
+					preA="";
+					preB="";
+					catA=a.position.substring(0,3);
+					catB=b.position.substring(0,3);
+					if (catA=="Pos" && catB=="PhD")
+					{
+						preA="A"; preB="B";
+					}	
+					else if (catA=="Phd" && catB=="Pos")
+					{
+						preA="B"; preB="A";
+					}	
+					
 					a = a.name.split(" ");
 					a = a[a.length - 1];
 
 					b = b.name.split(" ");
 					b = b[b.length - 1];
 
+					a=preA+a;
+					b=preB+b;
 					return a.localeCompare(b);
 				});
 				content = content.map(person => peopleTemplate(person));
