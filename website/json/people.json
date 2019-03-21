@@ -5,7 +5,7 @@
 			"hidden": false
 		},
 		{
-			"name": "Graduate Students",
+			"name": "Postdocs and Graduate Students",
 			"id": "students",
 			"hidden": false
 		},
@@ -172,7 +172,7 @@
 		{
 			"name": "Marios Hadjieleftheriou",
 			"image": "images/people/marios.gif",
-			"position": "Post-Doc (Now Lion Cave Capital)",
+			"position": "Post-Doc (Now at Lion Cave Capital)",
 			"website": "http://hadjieleftheriou.com/",
 			"category": "alumni"
 		},
@@ -193,7 +193,7 @@
 		{
 			"name": "Michalis Potamias",
 			"image": "images/people/michalis.jpg",
-			"position": "PhD (Now Professor at Google)",
+			"position": "PhD (Now at Google)",
 			"website": "https://www.linkedin.com/in/mpotamias/",
 			"category": "alumni"
 		}
