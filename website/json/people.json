@@ -197,5 +197,13 @@
 			"website": "https://www.linkedin.com/in/mpotamias/",
 			"category": "alumni"
 		}
+		,
+		{
+			"name": "Georgios Kellaris",
+			"image": "images/people/kellaris.jpeg",
+			"position": "Postdoc (Next: Co-Founder at Kalepso)",
+			"website": "https://www.linkedin.com/in/gkellaris/",
+			"category": "alumni"
+		}
 	]
 }
