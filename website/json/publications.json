@@ -12,7 +12,7 @@
 	},
 	{
 		"title": "Recommendations for optimizing the collective user experience",
-		"authors": "Behzad Golshan, Evimaria Terzi, Panayiotis Tsaparas",
+		"authors": "B. Golshan, E. Terzi, P. Tsaparas",
 		"venue": "SIAM SDM",
 		"date": {
 			"year": 2019
@@ -24,7 +24,7 @@
 	},
 	{
 		"title": "A team-formation algorithm for faultline minimization",
-		"authors": "Sanaz Bahargam, Behzad Golshan, Theodoros Lappas, Evimaria Terzi",
+		"authors": "S. Bahargam, B. Golshan, T. Lappas, E. Terzi",
 		"venue": "Expert Syst. Appl.",
 		"date": {
 			"year": 2019
@@ -36,7 +36,7 @@
 	},
 	{
 		"title": "Optimal Bloom Filters and Adaptive Merging for LSM-Trees",
-		"authors": "Niv Dayan, Manos Athanassoulis, Stratos Idreos",
+		"authors": "N. Dayan, M. Athanassoulis, S. Idreos",
 		"venue": "ACM TODS",
 		"date": {
 			"year": 2018
@@ -48,7 +48,7 @@
 	},
 	{
 		"title": "The Periodic Table of Data Structures",
-		"authors": "Stratos Idreos, Kostas Zoumpatianos, Manos Athanassoulis, Niv Dayan, Brian Hentschel, Michael S. Kester, Demi Guo, Lukas Maas, Wilson Qin, Abdul Wasay, Yiyou Sun",
+		"authors": "S. Idreos, K. Zoumpatianos, M. Athanassoulis, N. Dayan, B. Hentschel, M. S. Kester, D. Guo, L. Maas, W. Qin, A. Wasay, Y. Sun",
 		"venue": "IEEE Data Eng. Bull.",
 		"date": {
 			"year": 2018
@@ -60,7 +60,7 @@
 	},
 	{
 		"title": "Top-k Query Processing on Encrypted Databases with Strong Security Guarantees",
-		"authors": "Xianrui Meng, Haohan Zhu, George Kollios",
+		"authors": "X. Meng, H. Zhu, G. Kollios",
 		"venue": "IEEE ICDE",
 		"date": {
 			"year": 2018
@@ -72,7 +72,7 @@
 	},
 	{
 		"title": "Algorithms for Hiring and Outsourcing in the Online Labor Market",
-		"authors": "Aris Anagnostopoulos, Carlos Castillo, Adriano Fazzone, Stefano Leonardi, Evimaria Terzi",
+		"authors": "A. Anagnostopoulos, C. Castillo, A. Fazzone, S. Leonardi, E. Terzi",
 		"venue": "ACM KDD",
 		"date": {
 			"year": 2018
@@ -84,7 +84,7 @@
 	},
 	{
 		"title": "Markov Chain Monitoring",
-		"authors": "Harshal A. Chaudhari, Michael Mathioudakis, Evimaria Terzi",
+		"authors": "H. A. Chaudhari, M. Mathioudakis, E. Terzi",
 		"venue": "SIAM SDM",
 		"date": {
 			"year": 2018
@@ -96,7 +96,7 @@
 	},
 	{
 		"title": "Putting Data in the Driver’s Seat: Optimizing Earnings for On-Demand Ride-Hailing",
-		"authors": "Harshal A. Chaudhari, John W. Byers, Evimaria Terzi",
+		"authors": "H. A. Chaudhari, J. W. Byers, E. Terzi",
 		"venue": "ACM WSDM",
 		"date": {
 			"year": 2018
@@ -108,7 +108,7 @@
 	},
 	{
 		"title": "Mining Tours and Paths in Activity Networks",
-		"authors": "Sofia Maria Nikolakaki, Charalampos Mavroforakis, Alina Ene, Evimaria Terzi",
+		"authors": "S. M. Nikolakaki, C. Mavroforakis, A. Ene, E. Terzi",
 		"venue": "ACM WWW",
 		"date": {
 			"year": 2018
@@ -120,7 +120,7 @@
 	},
 	{
 		"title": "Slalom: Coasting Through Raw Data via Adaptive Partitioning and Indexing",
-		"authors": "Matthaios Olma, Manos Karpathiotakis, Ioannis Alagiannis, Manos Athanassoulis, Anastasia Ailamaki",
+		"authors": "M. Olma, M. Karpathiotakis, I. Alagiannis, M. Athanassoulis, A. Ailamaki",
 		"venue": "VLDB",
 		"date": {
 			"year": 2017
@@ -132,7 +132,7 @@
 	},
 	{
 		"title": "NED: An Inter-Graph Node Metric Based On Edit Distance",
-		"authors": "Haohan Zhu, Xianrui Meng, George Kollios",
+		"authors": "H. Zhu, X. Meng, G. Kollios",
 		"venue": "VLDB",
 		"date": {
 			"year": 2017
@@ -144,7 +144,7 @@
 	},
 	{
 		"title": "Accessing Data while Preserving Privacy",
-		"authors": "Georgios Kellaris, George Kollios, Kobbi Nissim, Adam O’Neill",
+		"authors": "G. Kellaris, G. Kollios, K. Nissim, A. O’Neill",
 		"venue": "arXiV",
 		"date": {
 			"year": 2017
@@ -156,7 +156,7 @@
 	},
 	{
 		"title": "UpBit: Scalable In-Memory Updatable Bitmap Indexing",
-		"authors": "Manos Athanassoulis, Zheng Yan, Stratos Idreos",
+		"authors": "M. Athanassoulis, Z. Yan, S. Idreos",
 		"venue": "ACM SIGMOD",
 		"date": {
 			"year": 2016
@@ -168,7 +168,7 @@
 	},
 	{
 		"title": "Generic Attacks on Secure Outsourced Databases",
-		"authors": "Georgios Kellaris, George Kollios, Kobbi Nissim, Adam O’Neill",
+		"authors": "G. Kellaris, G. Kollios, K. Nissim, A. O’Neill",
 		"venue": "ACM CCS",
 		"date": {
 			"year": 2016
