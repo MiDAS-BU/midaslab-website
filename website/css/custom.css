@@ -15,3 +15,10 @@
     margin-left: auto !important; 
     margin-right: auto !important;
 }
+
+.maxh100
+{
+    max-height: 100px !important;
+    width: auto !important;
+}
+
