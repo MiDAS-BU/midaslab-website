@@ -1,12 +1,5 @@
 const publicationsDisplayed = 12;
 
-/* ---- mixitup.js our work sorting ---- */
-$('#thework').mixItUp({
-	animation: {
-		duration: 1000
-	}
-});
-
 /* ---- our ideology hover ---- */
 $('.process-box').hover(function () {
 	$(this).find('.process-intro').hide();
@@ -14,38 +7,6 @@ $('.process-box').hover(function () {
 }, function () {
 	$(this).find('.process-content').hide();
 	$(this).find('.process-intro').fadeIn();
-});
-
-/* ---- our work gallery ---- */
-$('#work').magnificPopup({
-	delegate: 'a.zoom',
-	type: 'image',
-	fixedContentPos: false,
-	removalDelay: 300,
-	mainClass: 'mfp-fade',
-	gallery: {
-		enabled: true,
-		preload: [0, 2]
-	}
-});
-
-/* ---- popup image ---- */
-$('.popup-img').magnificPopup({
-	type: 'image',
-	removalDelay: 300,
-	mainClass: 'mfp-fade'
-});
-
-/* ---- popup video ---- */
-$(document).ready(function () {
-	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
-		fixedContentPos: false
-	});
 });
 
 /* ---- nav smooth scroll ---- */

@@ -1,29 +1,26 @@
 /*Custom CSS additions*/
 
 .logo-img-center {
-    max-height: 80px !important;
-    width: auto !important;   
-    display: block !important; 
-    margin-left: auto !important; 
-    margin-right: auto !important;
+	max-height: 80px !important;
+	width: auto !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .logo-img-navbar-center {
-    max-height: 40px !important;
-    width: auto !important;   
-    display: block !important; 
-    margin-left: auto !important; 
-    margin-right: auto !important;
+	max-height: 40px !important;
+	width: auto !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
-.maxh100
-{
-    max-height: 100px !important;
-    width: auto !important;
+.maxh100 {
+	max-height: 100px !important;
+	width: auto !important;
 }
 
-
-.pricing-clients
-{
-    opacity: .5;
+.pricing-clients {
+	opacity: .5;
 }
