@@ -42,7 +42,7 @@
 			"year": 2018
 		},
 		"links": {
-			"pdf": "http://delivery.acm.org/10.1145/3280000/3276980/a16-dayan.pdf?ip=155.41.101.120&id=3276980&acc=ACTIVE%20SERVICE&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1551984214_948b63dea0a99031657ff2111b173f67",
+			"pdf": "http://dl.acm.org/authorize?N37408",
 			"abstract": "https://dl.acm.org/citation.cfm?id=3276980"
 		}
 	},
@@ -162,7 +162,7 @@
 			"year": 2016
 		},
 		"links": {
-			"pdf": "http://delivery.acm.org/10.1145/2920000/2915964/p1319-athanassoulis.pdf?ip=155.41.101.120&id=2915964&acc=AUTHOR-IZED&key=73B3886B1AEFC4BB%2E786B8A3DF006C606%2E4D4702B0C3E38B35%2EB44754C3705C802D&__acm__=1551984067_26af2438f770c10c582204bf265cce43",
+			"pdf": "http://dl.acm.org/authorize?N24518",
 			"abstract": "https://dl.acm.org/citation.cfm?id=2915964"
 		}
 	},
@@ -216,7 +216,7 @@
 	},
 	{
 		"title": "Scalable Large Near-Clique Detection in Large-Scale Networks via Sampling",
-		"authors": "M. Mitzenmacher, J. Pachocki, R. Peng, C. Tsourakakis, S. Chen Xu",
+		"authors": "M. Mitzenmacher, J. Pachocki, R. Peng, C. Tsourakakis, S. C. Xu",
 		"venue": "ACM KDD",
 		"date": {
 			"year": 2015
