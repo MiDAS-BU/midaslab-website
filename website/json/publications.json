@@ -177,5 +177,101 @@
 			"pdf": "https://privacytools.seas.harvard.edu/files/privacytools/files/generic.pdf",
 			"abstract": "https://dl.acm.org/citation.cfm?id=2976749.2978386"
 		}
+	},
+	{
+		"title": "The K-clique Densest Subgraph Problem",
+		"authors": "C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/kcliqueDSP.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2736277.2741098"
+		}
+	},
+	{
+		"title": "Provably Fast Inference of Latent Features from Networks",
+		"authors": "C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/latent.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2741128"
+		}
+	},
+	{
+		"title": "Space- and Time-Efficient Algorithm for Maintaining Dense Subgraphs on One-Pass Dynamic Streams",
+		"authors": "S. Bhattacharya, M. Henzinger, D. Nanongkai, C. Tsourakakis",
+		"venue": "ACM STOC",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/stoc15.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?doid=2746539.2746592"
+		}
+	},
+	{
+		"title": "Scalable Large Near-Clique Detection in Large-Scale Networks via Sampling",
+		"authors": "M. Mitzenmacher, J. Pachocki, R. Peng, C. Tsourakakis, S. Chen Xu",
+		"venue": "ACM KDD",
+		"date": {
+			"year": 2015
+		},
+		"links": {
+			"pdf": "http://people.seas.harvard.edu/~babis/scalable-large-near-cliques.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=2783385"
+		}
+	},
+	{
+		"title": "Scalable motif-aware graph clustering",
+		"authors": "C. Tsourakakis, J. Pachocki, M. Mitzenmacher",
+		"venue": "WWW",
+		"date": {
+			"year": 2017
+		},
+		"links": {
+			"pdf": "https://lastinggems.files.wordpress.com/2017/03/www17-motif-clustering.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3038912.3052653"
+		}
+	},
+	{
+		"title": "Minimizing Polarization and Disagreement in Social Networks",
+		"authors": "C. Musco, Ch. Musco, C. Tsourakakis",
+		"venue": "WWW",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://lastinggems.files.wordpress.com/2017/12/polarization-disagreement-www18.pdf",
+			"abstract": "https://dl.acm.org/citation.cfm?id=3186103"
+		}
+	},
+	{
+		"title": "Risk-Averse Matchings over Uncertain Graph Databases",
+		"authors": "C. Tsourakakis, S. Sekar, J. Lam, L. Yang",
+		"venue": "ECML-PKDD",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1801.03190.pdf",
+			"abstract": "https://arxiv.org/abs/1801.03190"
+		}
+	},
+	{
+		"title": "Learning Networks from Random Walk-Based Node Similarities",
+		"authors": "J. Hoskins, C. Musco, Ch. Musco, C. Tsourakakis",
+		"venue": "NeurIPS",
+		"date": {
+			"year": 2018
+		},
+		"links": {
+			"pdf": "https://arxiv.org/pdf/1801.07386.pdf",
+			"abstract": "https://arxiv.org/abs/1801.07386"
+		}
 	}
 ]
