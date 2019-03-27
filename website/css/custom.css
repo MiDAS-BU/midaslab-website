@@ -9,7 +9,7 @@
 }
 
 .logo-img-navbar-center {
-	max-height: 40px !important;
+	max-height: 45px !important;
 	width: auto !important;
 	display: block !important;
 	margin-left: auto !important;
@@ -23,4 +23,21 @@
 
 .pricing-clients {
 	opacity: .5;
+}
+
+.big-logo-img-center {
+	max-height: 340px !important;
+	width: auto !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.BU-logo-img-center {
+	max-height: 80px !important;
+	width: auto !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-bottom: 1em;
 }
