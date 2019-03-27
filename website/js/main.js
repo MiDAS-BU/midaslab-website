@@ -70,10 +70,10 @@ $(document).ready(function () {
 				</p> \
 			</div> \
 		");
-		publications = publications.sort((a, b) => a.date.year * 100 + (a.date.month != 'undefined' ? a.date.month : 0) < b.date.year * 100 + (b.date.month != 'undefined' ? b.date.month : 0));
-		publications = publications.slice(0, publicationsDisplayed);
 
 		var publicationHtmlContent = publications
+			.sort((a, b) => b.date.year - a.date.year)
+			.slice(0, publicationsDisplayed)
 			.map(publication => {
 				publication.date.monthTxt = publication.date.month != 'undefined' ? months[publication.date.month] : "";
 
@@ -134,31 +134,26 @@ $(document).ready(function () {
 			.map(category => {
 				var content = people.people.filter(person => person.category == category.id)
 
-				content.sort((a, b) => {
-					preA="";
-					preB="";
-					catA=a.position.substring(0,3);
-					catB=b.position.substring(0,3);
-					if (catA=="Pos" && catB=="PhD")
-					{
-						preA="A"; preB="B";
-					}	
-					else if (catA=="Phd" && catB=="Pos")
-					{
-						preA="B"; preB="A";
-					}	
-					
-					a = a.name.split(" ");
-					a = a[a.length - 1];
+				content = content
+					.sort((a, b) => {
+						function lastName(person) {
+							names = person.name.split(" ");
+							return names[names.length - 1];
+						}
 
-					b = b.name.split(" ");
-					b = b[b.length - 1];
+						function prefix(person) {
+							if (person.position.toLowerCase().includes("postdoc")) {
+								return "A";
+							} else if (person.position.toLowerCase().includes("phd")) {
+								return "B";
+							} else {
+								return "C";
+							}
+						}
 
-					a=preA+a;
-					b=preB+b;
-					return a.localeCompare(b);
-				});
-				content = content.map(person => peopleTemplate(person));
+						return (prefix(a) + lastName(a)).localeCompare(prefix(b) + lastName(b));
+					})
+					.map(person => peopleTemplate(person));
 
 				category.content = "";
 
